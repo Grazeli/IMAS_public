@@ -1,0 +1,45 @@
+Application: qualityservice
+Aggregation: max
+
+-------------- Request 1 --------------
+Sender: FuzzyAgent3-> Output: 0.050040822997345066
+Sender: FuzzyAgent5-> Output: 0.0
+Sender: FuzzyAgent6-> Output: 0.0
+Sender: FuzzyAgent4-> Output: 0.018595962482744102
+Final Output: 0.05
+
+-------------- Request 2 --------------
+Sender: FuzzyAgent3-> Output: 0.004938168098433434
+Sender: FuzzyAgent5-> Output: 0.0
+Sender: FuzzyAgent6-> Output: 0.0
+Sender: FuzzyAgent4-> Output: 2.2369085871500545
+Final Output: 2.237
+
+-------------- Request 3 --------------
+Sender: FuzzyAgent3-> Output: 4.908689480334467E-4
+Sender: FuzzyAgent5-> Output: -0.8333328504748121
+Sender: FuzzyAgent6-> Output: -0.8333328504748121
+Sender: FuzzyAgent4-> Output: 0.007502587161963338
+Final Output: 0.008
+
+-------------- Request 4 --------------
+Sender: FuzzyAgent3-> Output: 4.908026709180746
+Sender: FuzzyAgent5-> Output: 0.0
+Sender: FuzzyAgent6-> Output: 0.0
+Sender: FuzzyAgent4-> Output: 3.038090948067495
+Final Output: 4.908
+
+-------------- Request 5 --------------
+Sender: FuzzyAgent3-> Output: 4.875349122374301
+Sender: FuzzyAgent5-> Output: 0.0
+Sender: FuzzyAgent6-> Output: 0.0
+Sender: FuzzyAgent4-> Output: 3.6260609894580758
+Final Output: 4.875
+
+-------------- Request 6 --------------
+Sender: FuzzyAgent3-> Output: 4.8753492453303755
+Sender: FuzzyAgent5-> Output: 0.0
+Sender: FuzzyAgent6-> Output: 0.0
+Sender: FuzzyAgent4-> Output: 4.861132115853355
+Final Output: 4.875
+

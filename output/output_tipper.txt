@@ -1,0 +1,27 @@
+Application: tipper
+Aggregation: min
+
+-------------- Request 1 --------------
+Sender: FuzzyAgent0-> Output: 5.000020040080156
+Sender: FuzzyAgent1-> Output: 5.000020040080156
+Sender: FuzzyAgent2-> Output: 10.006802136630876
+Final Output: 5.0
+
+-------------- Request 2 --------------
+Sender: FuzzyAgent0-> Output: 5.000020040080156
+Sender: FuzzyAgent1-> Output: 5.000020040080156
+Sender: FuzzyAgent2-> Output: 10.006802136630876
+Final Output: 5.0
+
+-------------- Request 3 --------------
+Sender: FuzzyAgent0-> Output: 5.6152844524361125
+Sender: FuzzyAgent1-> Output: 5.6152844524361125
+Sender: FuzzyAgent2-> Output: 10.041917706086005
+Final Output: 5.615
+
+-------------- Request 4 --------------
+Sender: FuzzyAgent0-> Output: 10.517272887774656
+Sender: FuzzyAgent1-> Output: 10.517272887774656
+Sender: FuzzyAgent2-> Output: 12.779205873154845
+Final Output: 10.517
+

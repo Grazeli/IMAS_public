@@ -1,0 +1,59 @@
+/*
+	A tip quality service calculation FIS (fuzzy inference system)
+	based on MamdaniQoSFewRules.fcl
+	Calculates quality service based on 'commitment', 'clarity' and 'influence'.
+	
+	Use of triangular membership functions.
+ */
+ 
+FUNCTION_BLOCK QualityServiceTrian
+
+VAR_INPUT
+	commitment : REAL;
+	clarity : REAL;
+	influence : REAL;
+END_VAR
+
+VAR_OUTPUT
+	service_quality : REAL;
+END_VAR
+
+FUZZIFY commitment
+	TERM nothing := TRIAN -4 -2 -0.5;
+	TERM minimal := TRIAN -2 -0.5 1.5;
+	TERM partially := TRIAN -0.5 1.5 3.5;
+	TERM satISfactory := TRIAN 1.5 3.5 5.5;
+	TERM largely := TRIAN 3.5 5.5 7;
+	TERM fully := TRIAN 5.5 7 9;
+END_FUZZIFY
+
+FUZZIFY clarity
+	TERM low := TRIAN -4 -1 2.5;
+	TERM medium := TRIAN -1 2.5 6;
+	TERM high:= TRIAN 2.5 6 9;
+END_FUZZIFY
+
+FUZZIFY influence
+	TERM low := TRIAN -4 -1 2.5;
+	TERM medium := TRIAN -1 2.5 6;
+	TERM high:= TRIAN 2.5 6 9;
+END_FUZZIFY
+
+DEFUZZIFY service_quality
+	TERM inadequate := TRIAN -4 -1 2.5;
+	TERM sufficient := TRIAN -1 2.5 6;
+	TERM excellent:= TRIAN 2.5 6 9;
+	METHOD : COG;
+	DEFAULT := 0;
+END_DEFUZZIFY
+
+RULEBLOCK No1
+	ACCU : MAX;
+	AND : MIN;
+	
+	RULE 1 : IF commitment IS fully AND influence IS high THEN service_quality IS excellent;
+	RULE 2 : IF commitment IS partially AND clarity IS high AND influence IS low THEN service_quality IS sufficient;
+	RULE 3 : IF commitment IS nothing THEN service_quality IS inadequate;
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK
